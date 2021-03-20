@@ -39,7 +39,7 @@ class VisualOdometry:
                                            nms_dist=4,
                                            conf_thresh=0.015,
                                            nn_thresh=0.7,
-                                           cuda=True)
+                                           cuda=False)
         self.tracker = PointTracker(
             max_length=2, nn_thresh=self.detector.nn_thresh)
         with open(annotations) as f:
